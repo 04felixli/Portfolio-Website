@@ -1,0 +1,38 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.text-color {
+  @apply text-gray-800;
+}
+
+.border-style {
+  @apply border border-cyan-500 rounded-md border-2
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* .underline {
+  text-decoration-color: rgb(31 41 55);
+  text-decoration: underline;
+} */
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(31 41 55), rgb(31 41 55))
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%
+}
