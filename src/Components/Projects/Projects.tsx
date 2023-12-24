@@ -28,7 +28,7 @@ const Projects = () => {
 
                 <section><IMFAT /></section>
 
-                {/* <section className="ml-10"><Chess /></section> */}
+                <section className="ml-36"><Chess /></section>
 
             </section>
 
