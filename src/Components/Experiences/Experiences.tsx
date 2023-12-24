@@ -2,8 +2,8 @@ import React from "react";
 
 const Experiences = () => {
     return (
-        <div className="text-white">
-            Hello
+        <div className="text-white min-h-screen">
+
         </div>
     )
 }

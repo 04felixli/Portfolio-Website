@@ -7,22 +7,32 @@ import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Experiences from './Components/Experiences/Experiences';
 import About from './Components/About/About';
-import { COLORS } from './Constants/Colors';
 
-function App() {
+function MainPage() {
   const [selectedOption, setSelectedOption] = useState<string>('Home');
 
   return (
-    <div className='w-screen min-h-screen bg-background'>
-      <Header setSelectedOption={setSelectedOption} />
+    <body className='min-h-screen bg-background flex flex-col'>
+      <Header selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
 
-      {selectedOption === 'Home' && <Home />}
-      {selectedOption === 'Projects' && <Projects />}
-      {selectedOption === 'Contact' && <Contact />}
-      {selectedOption === 'Experiences' && <Experiences />}
-      {selectedOption === 'About' && <About />}
-    </div>
+      <section className='mt-52 p-4 pl-40 text-left'>
+
+        <section>
+          <Home />
+        </section>
+
+        <section className='mt-56'>
+          <Projects />
+        </section>
+
+        <section className='mt-10'>
+          <Experiences />
+        </section>
+
+      </section>
+
+    </body>
   );
 }
 
-export default App;
+export default MainPage;
