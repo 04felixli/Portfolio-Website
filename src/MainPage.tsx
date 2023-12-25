@@ -12,7 +12,7 @@ function MainPage() {
   const [headerHeight, setHeaderHeight] = useState<number>(0);
 
   return (
-    <div className='min-h-screen bg-background flex flex-col'>
+    <div className='min-h-screen flex flex-col bg-gradient-to-r from-background to-color3'>
       <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} />
 
       <section className='mt-52 p-4 pl-40 text-left'>

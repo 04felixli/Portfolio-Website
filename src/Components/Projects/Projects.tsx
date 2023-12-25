@@ -13,9 +13,10 @@ const Projects = () => {
 
                 <section><Project project={IMFATProject} /></section>
 
+                <section className="ml-36"><Project project={PortfolioProject} /></section>
+
                 <section className="ml-36"><Project project={ChessProject} /></section>
 
-                <section className="ml-36"><Project project={PortfolioProject} /></section>
 
 
             </section>
