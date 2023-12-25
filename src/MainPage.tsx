@@ -25,8 +25,12 @@ function MainPage() {
           <Projects />
         </section>
 
-        <section className='mt-10'>
+        <section className='mt-56'>
           <Experiences />
+        </section>
+
+        <section>
+          <About />
         </section>
 
       </section>
