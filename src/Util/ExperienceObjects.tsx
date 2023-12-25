@@ -9,6 +9,7 @@ export interface ExperienceObject {
     status: string;
     companyLogo: string;
     companyWebsiteLink: string;
+    role: string;
 }
 
 export const RIFOExperience: ExperienceObject = {
@@ -21,7 +22,8 @@ export const RIFOExperience: ExperienceObject = {
     country: 'Canada',
     status: 'Co-op',
     companyLogo: '/Images/RifoLogo.jpg',
-    companyWebsiteLink: 'https://www.rifo.com/'
+    companyWebsiteLink: 'https://www.rifo.com/',
+    role: 'Full Stack Developer'
 }
 
 export const RogersExperience: ExperienceObject = {
@@ -34,5 +36,6 @@ export const RogersExperience: ExperienceObject = {
     country: 'Canada',
     status: 'Co-op',
     companyLogo: '/Images/RogersLogo.png',
-    companyWebsiteLink: 'https://about.rogers.com/?icid=R_COR_JOR_OB4PMA'
+    companyWebsiteLink: 'https://about.rogers.com/?icid=R_COR_JOR_OB4PMA',
+    role: 'Switch Technician'
 }

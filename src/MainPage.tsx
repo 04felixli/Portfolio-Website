@@ -9,11 +9,11 @@ import Experiences from './Components/Experiences/Experiences';
 import About from './Components/About/About';
 
 function MainPage() {
-  const [selectedOption, setSelectedOption] = useState<string>('Home');
+  const [headerHeight, setHeaderHeight] = useState<number>(0);
 
   return (
-    <body className='min-h-screen bg-background flex flex-col'>
-      <Header selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
+    <div className='min-h-screen bg-background flex flex-col'>
+      <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} />
 
       <section className='mt-52 p-4 pl-40 text-left'>
 
@@ -29,13 +29,17 @@ function MainPage() {
           <Experiences />
         </section>
 
-        <section>
-          <About />
+        <section className='mt-56'>
+          <About headerHeight={headerHeight} />
+        </section>
+
+        <section className='mt-56'>
+          <Contact />
         </section>
 
       </section>
 
-    </body>
+    </div>
   );
 }
 
