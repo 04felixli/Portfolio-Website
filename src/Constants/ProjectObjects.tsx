@@ -18,3 +18,10 @@ export const ChessProject: ProjectObject = {
     techStack: 'Python | Pygame',
     imagePath: '/Images/ChessGame.png'
 }
+
+export const PortfolioProject: ProjectObject = {
+    name: 'Portfolio',
+    description: 'A personal website used to show others stuff about my life, my personal projects, and work experience.',
+    techStack: 'React | TypeScript | Tailwind CSS',
+    imagePath: '/Images/PersonalPortfolio.png'
+}

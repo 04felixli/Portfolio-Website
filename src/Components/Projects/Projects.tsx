@@ -1,7 +1,7 @@
 import React from "react";
 import "../../GlobalStyles.css";
 import Project from "./Project";
-import { IMFATProject, ChessProject } from "../../Constants/ProjectObjects";
+import { IMFATProject, ChessProject, PortfolioProject } from "../../Constants/ProjectObjects";
 
 const Projects = () => {
 
@@ -14,6 +14,9 @@ const Projects = () => {
                 <section><Project project={IMFATProject} /></section>
 
                 <section className="ml-36"><Project project={ChessProject} /></section>
+
+                <section className="ml-36"><Project project={PortfolioProject} /></section>
+
 
             </section>
         </div>
