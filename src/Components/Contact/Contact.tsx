@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { goToSection } from "../../Util/lib";
 
 interface FormData {
     email: string;
@@ -34,12 +35,13 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="text-color min-h-screen" id={'Contact'}>
+        <div className="text-color" id={'Contact'}>
             <h1 className="text-6xl border-b-4 border-color2">Contact</h1>
 
             <section className="flex flex-row mt-20">
-                <section>
-                    <p className="text-2xl whitespace-pre-line">Wanna talk? {'\n'} Got a question? {'\n'} Feel free to send me a message.</p>
+                <section className="flex flex-col justify-between text-2xl whitespace-pre-line">
+                    <p>Wanna talk? {'\n'} Got a question? {'\n'} Feel free to send me a message.</p>
+                    <p className="text-base">Want to connect another way? Check out my <button className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md" onClick={() => goToSection('Footer', 0)}>links</button> below!</p>
                 </section>
 
                 <section className="bg-color4 ml-36 w-5/12 border border-4 border-color6 rounded-lg">

@@ -7,7 +7,7 @@ export const scrollToTop = (): void => {
 }
 
 export const goToSection = (sectionId: string, headerHeight: number): void => {
-    const section = document.getElementById(sectionId);
+    const section: HTMLElement | null = document.getElementById(sectionId);
 
     if (section) {
         const offsetTop = section.offsetTop - headerHeight;

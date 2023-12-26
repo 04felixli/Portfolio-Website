@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Experiences from './Components/Experiences/Experiences';
 import About from './Components/About/About';
+import Footer from './Components/Footer/Footer';
 
 function MainPage() {
   const [headerHeight, setHeaderHeight] = useState<number>(0);
@@ -16,7 +17,6 @@ function MainPage() {
       <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} />
 
       <section className='mt-52 p-4 pl-40 text-left'>
-
         <section>
           <Home />
         </section>
@@ -36,7 +36,10 @@ function MainPage() {
         <section className='mt-56'>
           <Contact />
         </section>
+      </section>
 
+      <section className=''>
+        <Footer />
       </section>
 
     </div>
