@@ -2,6 +2,8 @@ import React from "react";
 import "../../GlobalStyles.css";
 import { useState, useRef, useEffect } from "react";
 import { scrollToTop, goToSection } from "../../Util/lib";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 interface Props {
     headerHeight: number;

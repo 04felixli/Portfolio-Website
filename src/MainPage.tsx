@@ -9,12 +9,16 @@ import Experiences from './Components/Experiences/Experiences';
 import About from './Components/About/About';
 import Footer from './Components/Footer/Footer';
 
-function MainPage() {
-  const [headerHeight, setHeaderHeight] = useState<number>(0);
+interface Props {
+  headerHeight: number;
+}
+
+function MainPage({ headerHeight }: Props) {
+  // const [headerHeight, setHeaderHeight] = useState<number>(0);
 
   return (
     <div className='min-h-screen flex flex-col bg-gradient-to-r from-background to-color3'>
-      <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} />
+      {/* <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} /> */}
 
       <section className='mt-52 p-4 pl-40 text-left'>
         <section>
@@ -38,9 +42,9 @@ function MainPage() {
         </section>
       </section>
 
-      <section className=''>
+      {/* <section className=''>
         <Footer />
-      </section>
+      </section> */}
 
     </div>
   );
