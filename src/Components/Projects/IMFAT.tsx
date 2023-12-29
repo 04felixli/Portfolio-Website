@@ -1,6 +1,5 @@
 import React from "react"
 import Header from "../Header/Header";
-import { HashLink as Link } from 'react-router-hash-link';
 
 const IMFAT = () => {
     return (

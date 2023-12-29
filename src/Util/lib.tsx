@@ -14,3 +14,16 @@ export const goToSection = (sectionId: string, headerHeight: number): void => {
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
 }
+
+export const goToSection2 = (): void => {
+    const navigation: HTMLElement | null = document.querySelector(".header");
+
+    if (navigation) {
+        const navigationHeight = navigation.offsetHeight + navigation.offsetHeight * 0.25;
+
+        document.documentElement.style.setProperty(
+            "--scroll-padding",
+            navigationHeight + "px"
+        );
+    }
+}

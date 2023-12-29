@@ -50,4 +50,12 @@ body {
 /* Hide scrollbar for FireFox */
 html {
   scrollbar-width: none;
+
+  /* Smooth section navigation */
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 6rem);
+}
+
+.header {
+  @apply text-color px-8 py-1 w-full fixed justify-center items-center z-50;
 }
