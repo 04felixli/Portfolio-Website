@@ -1,6 +1,6 @@
 import React from "react";
 import { AboutMe } from "../../Util/AboutMeObjects";
-import { goToSection } from "../../Util/lib";
+import { Link } from "react-router-dom";
 
 interface Props {
     headerHeight: number;
@@ -18,7 +18,7 @@ const About = ({ headerHeight }: Props) => {
                     <p>{AboutMe.intro}</p>
                     <p className="mt-3">{AboutMe.professionalInterests}</p>
                     <p className="mt-3">{AboutMe.otherInterests}</p>
-                    <p className="mt-3">{AboutMe.conclusion} <button className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md" onClick={() => goToSection('Contact', headerHeight)}>{AboutMe.linkToContact}</button></p>
+                    <p className="mt-3">{AboutMe.conclusion} <Link to="#Contact" className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md">{AboutMe.linkToContact}</Link></p>
                 </section>
 
                 <section className="w-80 h-96 ml-40">

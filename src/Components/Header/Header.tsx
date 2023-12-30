@@ -1,7 +1,7 @@
 import React from "react";
 import "../../GlobalStyles.css";
 import { useState, useRef, useEffect } from "react";
-import { scrollToTop, goToSection } from "../../Util/lib";
+import { Link } from "react-router-dom";
 
 interface Props {
     headerHeight: number;
@@ -21,16 +21,25 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
     return (
         <header className="header" ref={ref}>
             <nav className="text-lg mt-5 flex justify-around items-center rounded-full p-4 bg-color1 shadow-lg">
-                <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4" onClick={scrollToTop}>
-                    {/* <span className="hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-gray-800 before:absolute before:left-0 before:bottom-0">Home</span> */}
+                <Link to="/#Home" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
                     Home
-                </button>
-                <a href="/#Projects" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                </Link>
+
+                <Link to="/#Projects" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
                     Projects
-                </a>
-                <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4" onClick={() => goToSection('Experiences', headerHeight)}>Experiences</button>
-                <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4" onClick={() => goToSection('About', headerHeight)}>About</button>
-                <button className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4" onClick={() => goToSection('Contact', headerHeight)}>Contact</button>
+                </Link>
+
+                <Link to="/#Experiences" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                    Experiences
+                </Link>
+
+                <Link to="/#About" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                    About
+                </Link>
+
+                <Link to="/#Contact" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                    Contact
+                </Link>
             </nav>
         </header>
     );

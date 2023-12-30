@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './GlobalStyles.css';
-import Header from './Components/Header/Header';
-import Home from './Components/Home/Home';
-import Projects from './Components/Projects/Projects';
-import Contact from './Components/Contact/Contact';
-import Experiences from './Components/Experiences/Experiences';
-import About from './Components/About/About';
-import Footer from './Components/Footer/Footer';
+import '../GlobalStyles.css';
+import Header from './Header/Header';
+import Home from './Home/Home';
+import Projects from './Projects/Projects';
+import Contact from './Contact/Contact';
+import Experiences from './Experiences/Experiences';
+import About from './About/About';
+import Footer from './Footer/Footer';
 
 interface Props {
   headerHeight: number;
@@ -19,6 +19,8 @@ function MainPage({ headerHeight }: Props) {
   return (
     <div className='min-h-screen flex flex-col bg-gradient-to-r from-background to-color3'>
       {/* <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} /> */}
+
+      <div id="Home"></div>
 
       <section className='mt-52 p-4 pl-40 text-left'>
         <section>
