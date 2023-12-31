@@ -1,9 +1,10 @@
 export interface ProjectObject {
     name: string;
-    shortDescription: string;
+    shortDescription: string; // description for project card
     techStack: string[];
-    imagePath: string;
-    URL: string;
+    cardImagePath: string; // image path for card
+    detailedImagePath: string | undefined; // path to image to display on detailed project page
+    URL: string; // URL to the detailed project page
     reasonForBuilding: string | undefined;
     overview: string | undefined;
     featuresLine: string | undefined; // A sentence to segway into the list of features 
@@ -30,7 +31,8 @@ export const IMFATProject: ProjectObject = {
                        gym-goers to track their workouts and personal metrics, monitor progress, and create customized 
                        workout templates effortlessly.`,
     techStack: ['React', 'Node.js', 'Express.js', 'Typescript', 'PostgreSQL', 'Supabase', 'Tailwind CSS'],
-    imagePath: '/Images/WorkoutHistory.png',
+    cardImagePath: '/Images/WorkoutHistory.png',
+    detailedImagePath: '/Images/StartWorkout.png',
     URL: "/Projects/IMFAT",
     reasonForBuilding: `As an avid gym-goer myself who started off tracking workouts using Google Sheets and then Apple Notes, 
                        I found that although they were convenient, I disliked how tedious it was to figure out if I was making 
@@ -60,13 +62,21 @@ export const ChessProject: ProjectObject = {
     name: 'PvP Chess',
     shortDescription: 'A two player chess game with features such as legal move validation and checkmate/stalemate checking.',
     techStack: ['Python', 'Pygame'],
-    imagePath: '/Images/ChessGame.png',
+    cardImagePath: '/Images/ChessGame.png',
+    detailedImagePath: '/Images/ChessGame.png',
     URL: "/Projects/Chess",
-    reasonForBuilding: undefined,
+    reasonForBuilding: 'The goal of this project was to create an interactive Player vs. Player chess game using Python and the Pygame library.',
     overview: undefined,
-    featuresLine: undefined,
-    featuresList: undefined,
-    otherInfo: undefined,
+    featuresLine: 'It has features such as:',
+    featuresList: [
+        'Interactive GUI',
+        'Piece Movement and Rules',
+        'Game State Management',
+        'Endgame Conditions'
+    ],
+    otherInfo: `This project helped me better understand Object-Oriented Programming, as 
+                I used OOP principles to architect the game's structure, 
+                encapsulate functionalities, and manage interactions between different game components.`,
     githubLink: 'https://github.com/04felixli/Chess-Project',
     githubLinkFE: undefined,
     githubLinkBE: undefined,
@@ -78,14 +88,24 @@ export const PortfolioProject: ProjectObject = {
     name: 'Portfolio',
     shortDescription: 'A personal website used to show others stuff about my life, my personal projects, and work experience.',
     techStack: ['React', 'Typescript', 'Tailwind CSS'],
-    imagePath: '/Images/PersonalPortfolio.png',
+    cardImagePath: '/Images/PersonalPortfolio.png',
+    detailedImagePath: undefined,
     URL: "/Projects/Portfolio",
-    reasonForBuilding: undefined,
-    overview: undefined,
-    featuresLine: undefined,
-    featuresList: [],
+    reasonForBuilding: `I'd be lying a bit (possibly a lot) if I told you I built this site as a "representation of my passion for creating intuitive and 
+                        visually appealing digital experiences".
+                        So, let's be honest here, I definitely built this site just so people would have a one-stop-shop to see a 
+                        detailed explaination of all the projects and experiences I've done or had in the past. 
+                        Making pixels on a screen look pretty is also pretty theraputic, so there's that as well I guess :)`,
+    overview: `And considering you spent more than 10 seconds on this website and made it this to this page, I'd say this "project" needs no further explanation or picture to go with it.`,
+    featuresLine: 'Features include:',
+    featuresList: [
+        'Responsive Design',
+        'Project Showcase',
+        'Interactive Elements',
+        'Smooth Navigation'
+    ],
     otherInfo: undefined,
-    githubLink: undefined,
+    githubLink: 'https://github.com/04felixli/Portfolio-Website',
     githubLinkFE: undefined,
     githubLinkBE: undefined,
     databaseDiagramLink: undefined,
