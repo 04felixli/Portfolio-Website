@@ -1,6 +1,6 @@
-export const openLink = (link: string) => {
-    window.open(link, '_blank');
-}
+// export const openLink = (link: string) => {
+//     window.open(link, '_blank');
+// }
 
 // export const scrollToTop = (): void => {
 //     window.scrollTo({ top: 0, behavior: 'smooth' });

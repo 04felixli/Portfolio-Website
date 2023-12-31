@@ -1,5 +1,4 @@
 import React from "react";
-import { openLink } from "../../Util/lib";
 import { AboutMe } from "../../Util/AboutMeObjects";
 
 const Footer = () => {
@@ -10,14 +9,14 @@ const Footer = () => {
                 <a href="mailto:04felix.li.@gmail.com" className="underline underline-offset-4">04felix.li@gmail.com</a>
             </section>
 
-            <section className="flex flex-row justify-around">
-                <button className="w-12" onClick={() => { openLink(AboutMe.linkedIn) }}>
+            <section className="flex flex-row justify-around items-center">
+                <a href={AboutMe.linkedIn} target="_blank" className="w-12">
                     <img src='/Images/LinkedInLogo.png' alt="LinkedInLogo" className="object-fit" />
-                </button>
+                </a>
 
-                <button className="w-12" onClick={() => { openLink(AboutMe.github) }}>
+                <a href={AboutMe.github} target="_blank" className="w-12">
                     <img src='/Images/githubLogo.png' alt="githubLogo" className="object-fit" />
-                </button>
+                </a>
             </section>
 
         </div>

@@ -20,7 +20,7 @@ const Project = ({ project }: Props) => {
                     </p>
                     <section className="flex flex-row flex-wrap">
                         {project.techStack.map((tech: string, index: number) => (
-                            <React.Fragment key={tech}>
+                            <React.Fragment key={index}>
                                 <p>{tech}</p>
                                 {index !== project.techStack.length - 1 && <p>&nbsp;|&nbsp;</p>}
                             </React.Fragment>
