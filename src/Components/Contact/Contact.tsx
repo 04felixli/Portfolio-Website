@@ -4,24 +4,15 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>();
-    const [buttonText, setButtonText] = useState<string>("Send message");
-
-    useEffect(() => {
-        const button = document.getElementById('sendButton');
-
-        if (button) {
-            const buttonRect = button.getBoundingClientRect();
-            console.log('Button width:', buttonRect.width, 'px');
-            console.log('Button height:', buttonRect.height, 'px');
-        }
-    }, [])
+    const [isSent, setIsSent] = useState<boolean>(false);
+    const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
 
     const sendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (form.current) {
-            setButtonText("Sending...");
             try {
+                setIsButtonDisabled(true); // Disable the button
 
                 await emailjs.sendForm(
                     process.env.REACT_APP_EMAILJS_SERVICE_ID!,
@@ -30,12 +21,14 @@ const Contact = () => {
                     process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
                 );
 
-                setButtonText("Sent");
+                setIsSent(true);
 
                 setTimeout(() => {
-                    setButtonText("Send message");
+                    setIsSent(false);
                     form.current?.reset(); // Reset the form fields
-                }, 1000); // Revert button text after 1 second
+                    setIsButtonDisabled(false); // Enable the button after form clears
+
+                }, 2000); // Revert button text after 1 second
 
             } catch (error) {
                 console.error('Error sending email:', error);
@@ -91,11 +84,11 @@ const Contact = () => {
                             </div>
                             <button
                                 type="submit"
-                                id="sendButton"
-                                className={`py-3 px-5 text-sm text-center rounded-full bg-color6 focus:ring-0 focus:outline-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-lg duration-300 w-32 ${buttonText === "Sent" ? 'bg-green-300' : ''}`}
+                                className={`py-3 px-5 text-sm text-center rounded-full bg-color6 focus:ring-0 focus:outline-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-lg duration-300 w-32 ${isButtonDisabled ? 'bg-color3' : ''} ${isSent ? 'bg-green-300' : ''}`}
                                 value="Send"
+                                disabled={isButtonDisabled}
                             >
-                                {buttonText}
+                                {!isSent ? 'Send message' : 'Sent'}
                             </button>
                         </form>
                     </div>

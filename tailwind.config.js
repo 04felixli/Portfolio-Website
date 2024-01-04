@@ -6,6 +6,16 @@ module.exports = {
     './src/**/*.tsx',
   ],
   theme: {
+    screens: {
+      'mobile-S': '375px', // Default
+      'mobile-M': '375px',
+      'mobile-L': '425px',
+      'tablet': '768px',
+      'laptop': '1024px',
+      'laptop-L': '1440px',
+      '4K': '2560px',
+    },
+
     extend: {
       colors: {
         'color1': '#D6CCC2',

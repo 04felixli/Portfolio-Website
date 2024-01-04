@@ -21,6 +21,7 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
     return (
         <header className="header" ref={ref}>
             <nav className="text-lg mt-5 flex justify-around items-center rounded-full p-4 bg-color1 shadow-lg">
+
                 <Link to="/#Home" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
                     Home
                 </Link>

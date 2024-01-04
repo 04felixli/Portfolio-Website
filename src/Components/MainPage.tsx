@@ -17,12 +17,11 @@ function MainPage({ headerHeight }: Props) {
   // const [headerHeight, setHeaderHeight] = useState<number>(0);
 
   return (
-    <div className='min-h-screen flex flex-col bg-gradient-to-r from-background to-color3'>
-      {/* <Header headerHeight={headerHeight} setHeaderHeight={setHeaderHeight} /> */}
+    <div className='min-h-screen flex flex-col bg-gradient-to-r from-background to-color3 items-center'>
 
       <div id="Home"></div>
 
-      <section className='mt-52 p-4 pl-40 text-left'>
+      <section className='mt-52 py-8 px-40 text-left max-w-[1920px]'>
         <section>
           <Home />
         </section>
@@ -44,9 +43,6 @@ function MainPage({ headerHeight }: Props) {
         </section>
       </section>
 
-      {/* <section className=''>
-        <Footer />
-      </section> */}
 
     </div>
   );

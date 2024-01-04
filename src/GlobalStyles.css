@@ -59,3 +59,11 @@ html {
 .header {
   @apply text-color px-8 py-1 w-full fixed justify-center items-center z-50;
 }
+
+.w-3-5-12 {
+  width: 31%;
+}
+
+.h-100 {
+  height: 32rem;
+}

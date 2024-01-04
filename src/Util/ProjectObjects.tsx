@@ -85,7 +85,7 @@ export const ChessProject: ProjectObject = {
 }
 
 export const PortfolioProject: ProjectObject = {
-    name: 'Portfolio',
+    name: 'Personal Portfolio',
     shortDescription: 'A personal website used to show others stuff about my life, my personal projects, and work experience.',
     techStack: ['React', 'Typescript', 'Tailwind CSS'],
     cardImagePath: '/Images/PersonalPortfolio.png',

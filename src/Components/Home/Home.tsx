@@ -5,7 +5,7 @@ import { AboutMe } from "../../Util/AboutMeObjects";
 const Home = () => {
 
     return (
-        <div className="text-color flex flex-row">
+        <div className="text-color flex flex-row border">
             <section className="w-6/12">
                 <p className="text-4xl">What's up?</p>
                 <p className="text-4xl mt-5">I'm</p>
