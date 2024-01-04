@@ -19,7 +19,7 @@ export const setScrollPaddingForHeader = (): void => {
     const navigation: HTMLElement | null = document.querySelector(".header");
 
     if (navigation) {
-        const navigationHeight = navigation.offsetHeight + navigation.offsetHeight * 0.25;
+        const navigationHeight = navigation.offsetHeight + navigation.offsetHeight * 0.5;
 
         document.documentElement.style.setProperty(
             "--scroll-padding",

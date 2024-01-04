@@ -6,6 +6,7 @@ interface AboutMeObject {
     linkToContact: string;
     linkedIn: string;
     github: string;
+    email: string;
 }
 
 export const AboutMe: AboutMeObject = {
@@ -15,5 +16,6 @@ export const AboutMe: AboutMeObject = {
     conclusion: 'Want to chat about anything? Or maybe you want to carry me in Apex? Just',
     linkToContact: 'reach out!',
     linkedIn: 'https://www.linkedin.com/in/04felixli',
-    github: 'https://github.com/04felixli'
+    github: 'https://github.com/04felixli',
+    email: '04felix.li@gmail.com'
 }
