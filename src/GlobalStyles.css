@@ -67,3 +67,7 @@ html {
 .h-100 {
   height: 32rem;
 }
+
+.section-names {
+  @apply text-5xl laptop-L:text-6xl border-b-4 border-color2;
+}

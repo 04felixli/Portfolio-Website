@@ -39,16 +39,16 @@ const Contact = () => {
 
     return (
         <div className="text-color" id={'Contact'}>
-            <h1 className="text-6xl border-b-4 border-color2">Contact</h1>
+            <h1 className="section-names">Contact</h1>
 
-            <section className="flex flex-row mt-20">
-                <section className="flex flex-col justify-between text-2xl whitespace-pre-line">
+            <section className="flex flex-col laptop:flex-row mt-10 laptop:mt-20">
+                <section className="hidden laptop:flex flex-col justify-between text-2xl whitespace-pre-line">
                     <p>Wanna talk? {'\n'} Got a question? {'\n'} Feel free to send me a message.</p>
                     <p className="text-base">Want to connect another way? Check out my links below!</p>
                 </section>
 
-                <section className="bg-color4 ml-36 w-5/12 border border-4 border-color6 rounded-lg">
-                    <div className="p-6 max-w-screen-md">
+                <section className="bg-color4 laptop:ml-36 w-full laptop:w-5/12 border border-4 border-color6 rounded-lg">
+                    <div className="p-6">
                         <form ref={form as React.RefObject<HTMLFormElement>} onSubmit={sendEmail} className="space-y-8">
                             <input
                                 type="text"
@@ -92,6 +92,10 @@ const Contact = () => {
                             </button>
                         </form>
                     </div>
+                </section>
+
+                <section>
+                    <p className="text-base mt-5 laptop:hidden">Want to connect another way? Check out my links below!</p>
                 </section>
             </section>
         </div>

@@ -7,15 +7,15 @@ const Projects = () => {
 
     return (
         <div className="text-color" id={'Projects'}>
-            <h1 className="text-6xl border-b-4 border-color2">Projects</h1>
+            <h1 className="section-names">Projects</h1>
 
-            <section className="flex laptop-L:flex-row flex-wrap mt-20 justify-around tablet:max-laptop-L:flex-col">
+            <section className="flex laptop-L:flex-row flex-wrap mt-10 laptop:mt-20 justify-around flex-col">
 
-                <section className="w-3-5-12 tablet:max-laptop-L:w-full"><Project project={IMFATProject} /></section>
+                <section className="w-full laptop-L:w-[31%]"><Project project={IMFATProject} /></section>
 
-                <section className="w-3-5-12 tablet:max-laptop-L:w-full"><Project project={ChessProject} /></section>
+                <section className="w-full laptop-L:w-[31%]"><Project project={ChessProject} /></section>
 
-                <section className="w-3-5-12 tablet:max-laptop-L:w-full"><Project project={PortfolioProject} /></section>
+                <section className="w-full laptop-L:w-[31%]"><Project project={PortfolioProject} /></section>
 
             </section>
         </div>

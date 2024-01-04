@@ -6,13 +6,13 @@ import Experience from "./Experience";
 const Experiences = () => {
     return (
         <div className="text-color" id={'Experiences'}>
-            <h1 className="text-6xl border-b-4 border-color2">Experiences</h1>
+            <h1 className="section-names">Experiences</h1>
 
-            <section className="flex flex-col mt-20">
+            <section className="flex flex-col mt-10 laptop:mt-20">
 
                 <section><Experience experience={RIFOExperience} /></section>
 
-                <section className="mt-20"><Experience experience={RogersExperience} /></section>
+                <section className="mt-5 laptop:mt-20"><Experience experience={RogersExperience} /></section>
 
             </section>
 

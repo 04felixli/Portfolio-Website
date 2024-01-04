@@ -3,7 +3,7 @@ import { AboutMe } from "../../Util/AboutMeObjects";
 
 const Footer = () => {
     return (
-        <div className="w-screen bg-color1 h-36 text-color text-lg py-8 px-40 flex flex-row justify-between" id='Footer'>
+        <div className="w-screen bg-color1 h-36 text-color text-lg py-8 px-20 flex flex-row justify-between" id='Footer'>
             <section className="flex flex-col justify-around">
                 <p>Felix Li</p>
                 <a href="mailto:04felix.li.@gmail.com" className="underline underline-offset-4">04felix.li@gmail.com</a>

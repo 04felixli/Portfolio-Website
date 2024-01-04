@@ -20,27 +20,40 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
 
     return (
         <header className="header" ref={ref}>
-            <nav className="text-lg mt-5 flex justify-around items-center rounded-full p-4 bg-color1 shadow-lg">
+            <nav className="">
 
-                <Link to="/#Home" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
-                    Home
-                </Link>
+                <div className="flex laptop:hidden">
+                    <button
+                        className="HAMBURGER-ICON space-y-2"
+                    >
+                        <span className="block h-1 w-8 animate-pulse bg-gray-600"></span>
+                        <span className="block h-1 w-8 animate-pulse bg-gray-600"></span>
+                        <span className="block h-1 w-8 animate-pulse bg-gray-600"></span>
+                    </button>
+                </div>
 
-                <Link to="/#Projects" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
-                    Projects
-                </Link>
+                <div className="hidden laptop:flex text-lg mt-5 justify-around items-center rounded-full p-4 bg-color1 shadow-lg">
+                    <Link to="/#Home" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                        Home
+                    </Link>
 
-                <Link to="/#Experiences" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
-                    Experiences
-                </Link>
+                    <Link to="/#Projects" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                        Projects
+                    </Link>
 
-                <Link to="/#About" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
-                    About
-                </Link>
+                    <Link to="/#Experiences" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                        Experiences
+                    </Link>
 
-                <Link to="/#Contact" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
-                    Contact
-                </Link>
+                    <Link to="/#About" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                        About
+                    </Link>
+
+                    <Link to="/#Contact" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
+                        Contact
+                    </Link>
+                </div>
+
             </nav>
         </header>
     );
