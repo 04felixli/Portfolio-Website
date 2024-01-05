@@ -17,7 +17,7 @@ export const RIFOExperience: ExperienceObject = {
     description: 'Utilized React, ASP.NET Core, and MySQL to create a comprehensive realtor tool, processing extensive Canadian housing data for informed decision-making. Also developed a C# WinForms app for multimedia display across multiple screens.',
     startDate: 'Sept. 2023',
     endDate: 'Dec. 2023',
-    techStack: 'React | ASP.Net Core | MySQL | .NET | WinForms',
+    techStack: 'React | ASP.Net Core | MySQL | .NET Core | WinForms',
     cityOrState: 'Toronto',
     country: 'Canada',
     status: 'Co-op',

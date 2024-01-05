@@ -18,6 +18,35 @@ const About = ({ headerHeight }: Props) => {
                     <p>{AboutMe.intro}</p>
                     <p className="mt-3">{AboutMe.professionalInterests}</p>
                     <p className="mt-3">{AboutMe.otherInterests}</p>
+                    <p className="mt-3">{AboutMe.introduceTechStack}</p>
+                    <section className="ml-5">
+                        <section className="mt-3">
+                            <p className="font-bold">Languages: </p>
+                            <ul className="flex flex-row mt-1 flex-wrap">
+                                {AboutMe.languages.map((language: string, index: number) => (
+                                    <li key={`language${index}`} className="px-4 py-1 rounded-lg m-1 bg-color3 text-center text-nowrap">{language}</li>
+                                ))}
+                            </ul>
+                        </section>
+
+                        <section className="mt-3">
+                            <p className="font-bold">Technologies/Frameworks: </p>
+                            <ul className="flex flex-row mt-1 flex-wrap">
+                                {AboutMe.technologies.map((technology: string, index: number) => (
+                                    <li key={`technology${index}`} className="px-4 py-1 rounded-lg m-1 bg-color3 text-center text-nowrap">{technology}</li>
+                                ))}
+                            </ul>
+                        </section>
+
+                        <section className="mt-3">
+                            <p className="font-bold">Dev Tools: </p>
+                            <ul className="flex flex-row mt-1 flex-wrap">
+                                {AboutMe.devTools.map((tool: string, index: number) => (
+                                    <li key={`tool${index}`} className="px-4 py-1 rounded-lg m-1 bg-color3 text-center text-nowrap">{tool}</li>
+                                ))}
+                            </ul>
+                        </section>
+                    </section>
                     <p className="mt-3">{AboutMe.conclusion} <Link to="#Contact" className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md">{AboutMe.linkToContact}</Link></p>
                 </section>
 
