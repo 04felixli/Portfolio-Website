@@ -6,10 +6,6 @@
   @apply text-gray-800;
 }
 
-.border-style {
-  @apply border border-cyan-500 rounded-md border-2
-}
-
 body {
   font-family: 'Times New Roman', Times, serif;
 }
