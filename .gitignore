@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # images folder contents
-Public/Images/*
+# Public/Images/*
 
 # .env file
 .env
