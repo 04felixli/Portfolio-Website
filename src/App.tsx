@@ -7,6 +7,8 @@ import DetailedProject from './Components/Projects/DetailedProject';
 import { useState } from 'react';
 import { setScrollPaddingForHeader } from './Util/lib';
 import { IMFATProject, ChessProject, PortfolioProject } from './Util/Objects/ProjectObjects';
+import { inject } from '@vercel/analytics';
+
 
 const App = () => {
     const [headerHeight, setHeaderHeight] = useState<number>(0);
@@ -22,6 +24,9 @@ const App = () => {
 
     // Event listener to update screenWidth when the window is resized
     useEffect(() => {
+
+        inject();
+
         window.addEventListener('resize', updateScreenWidth);
 
         // Clean up the event listener when component unmounts
