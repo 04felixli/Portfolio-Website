@@ -52,7 +52,7 @@ const Contact = () => {
 
             <section className="flex flex-col laptop:flex-row mt-10 laptop:mt-20">
                 <section className="hidden laptop:flex flex-col justify-between text-2xl whitespace-pre-line">
-                    <p>Wanna talk? {'\n'} Got a question? {'\n'} Feel free to send me a message.</p>
+                    <p>Got a question? {'\n'} Feel free to send me a message.</p>
                     <p className="text-base">Want to connect another way? Check out my links below!</p>
                 </section>
 

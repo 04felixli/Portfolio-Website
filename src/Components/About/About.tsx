@@ -14,7 +14,8 @@ const About = ({ headerHeight }: Props) => {
 
             <section className="text-lg mt-10 laptop:mt-20 flex flex-row">
 
-                <section className="w-full laptop:w-4/12">
+                {/* <section className="w-full laptop:w-4/12"> */}
+                <section className="w-full">
                     <p>{AboutMe.intro}</p>
                     <p className="mt-3">{AboutMe.professionalInterests}</p>
                     <p className="mt-3">{AboutMe.otherInterests}</p>
@@ -50,13 +51,13 @@ const About = ({ headerHeight }: Props) => {
                     <p className="mt-5">{AboutMe.conclusion} <Link to="#Contact" className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md">{AboutMe.linkToContact}</Link></p>
                 </section>
 
-                <section className="w-80 h-96 ml-40 hidden laptop:flex">
+                {/* <section className="w-80 h-96 ml-40 hidden laptop:flex">
                     <img
                         src="/Images/AboutPic.jpg"
                         alt="AboutMePic"
                         className="w-full h-full object-cover border border-color6 border-4 rounded-lg shadow-md"
                     />
-                </section>
+                </section> */}
 
 
             </section>
