@@ -47,7 +47,7 @@ const About = ({ headerHeight }: Props) => {
                             </ul>
                         </section>
                     </section>
-                    <p className="mt-3">{AboutMe.conclusion} <Link to="#Contact" className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md">{AboutMe.linkToContact}</Link></p>
+                    <p className="mt-5">{AboutMe.conclusion} <Link to="#Contact" className="bg-color6 p-1 rounded-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:shadow-md">{AboutMe.linkToContact}</Link></p>
                 </section>
 
                 <section className="w-80 h-96 ml-40 hidden laptop:flex">

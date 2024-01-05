@@ -1,18 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from '@emailjs/browser';
+import LoadingIcon from "../../Util/LoadingIcon";
 
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>();
-    const [isSent, setIsSent] = useState<boolean>(false);
-    const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
+    const [isSentSuccessful, setIsSentSuccessful] = useState<boolean | null>(null); // State for "Sent!" or "An error occured while trying to send the message. Please try again." msg
+    const [isSending, setIsSending] = useState<boolean>(false); // state for loading icon
 
     const sendEmail = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (form.current) {
             try {
-                setIsButtonDisabled(true); // Disable the button
+
+                setIsSending(true);
 
                 await emailjs.sendForm(
                     process.env.REACT_APP_EMAILJS_SERVICE_ID!,
@@ -21,17 +23,24 @@ const Contact = () => {
                     process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
                 );
 
-                setIsSent(true);
+                setIsSending(false);
+
+                setIsSentSuccessful(true);
 
                 setTimeout(() => {
-                    setIsSent(false);
                     form.current?.reset(); // Reset the form fields
-                    setIsButtonDisabled(false); // Enable the button after form clears
-
-                }, 2000); // Revert button text after 1 second
+                    setIsSentSuccessful(null);
+                }, 1000);
 
             } catch (error) {
                 console.error('Error sending email:', error);
+                setIsSentSuccessful(false);
+
+                setTimeout(() => {
+                    form.current?.reset(); // Reset the form fields
+                    setIsSentSuccessful(null);
+                    setIsSending(false);
+                }, 1000);
 
             }
         }
@@ -53,8 +62,6 @@ const Contact = () => {
                             <input
                                 type="text"
                                 id="Name"
-                                // value={formData.name}
-                                // onChange={handleChange}
                                 className="shadow-sm bg-gray-50 border border-color4 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-0 focus:shadow-lg"
                                 placeholder="Name*"
                                 name="user_name"
@@ -63,8 +70,6 @@ const Contact = () => {
                             <input
                                 type="email"
                                 id="email"
-                                // value={formData.email}
-                                // onChange={handleChange}
                                 className="shadow-sm bg-gray-50 border border-color4 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-0 focus:shadow-lg"
                                 placeholder="Email*"
                                 name="user_email"
@@ -74,22 +79,50 @@ const Contact = () => {
                                 <textarea
                                     id="message"
                                     rows={6}
-                                    // value={formData.message}
-                                    // onChange={handleChange}
                                     className="shadow-sm bg-gray-50 border border-color4 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-0 focus:shadow-lg"
                                     placeholder="Message*"
                                     name="message"
                                     required
                                 ></textarea>
                             </div>
-                            <button
-                                type="submit"
-                                className={`py-3 px-5 text-sm text-center rounded-full bg-color6 focus:ring-0 focus:outline-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-lg duration-300 w-32 ${isButtonDisabled ? 'bg-color3' : ''} ${isSent ? 'bg-green-300' : ''}`}
-                                value="Send"
-                                disabled={isButtonDisabled}
-                            >
-                                {!isSent ? 'Send message' : 'Sent'}
-                            </button>
+
+                            {
+                                (!isSending && isSentSuccessful === null) &&
+
+                                <button
+                                    type="submit"
+                                    className='py-3 px-5 text-sm text-center rounded-full bg-color6 focus:ring-0 focus:outline-none transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-lg duration-300 w-32'
+                                    value="Send"
+                                >
+                                    Send message
+                                </button>
+                            }
+
+                            {
+                                isSending &&
+                                <div className="flex flex-row items-center">
+                                    <p className='py-3 px-5 text-sm text-center rounded-full bg-gray-200 w-32 mr-1'>
+                                        Sending...
+                                    </p>
+
+                                    <LoadingIcon />
+                                </div>
+
+                            }
+
+                            {
+                                (isSentSuccessful === false) &&
+
+                                <p className="text-red-500 text-sm">An error occured while trying to send the message. Please try again.</p>
+                            }
+
+                            {
+                                isSentSuccessful &&
+                                <p className='py-3 px-5 text-sm text-center rounded-full bg-green-300 w-32'>
+                                    Sent!
+                                </p>
+                            }
+
                         </form>
                     </div>
                 </section>
