@@ -57,7 +57,7 @@ html {
 }
 
 .header {
-  @apply text-color px-8 py-1 w-full fixed justify-center items-center z-50;
+  @apply text-color px-8 py-1 w-full fixed flex justify-end tablet:justify-center tablet:items-center z-50;
 }
 
 .w-3-5-12 {

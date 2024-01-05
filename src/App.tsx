@@ -10,10 +10,27 @@ import { IMFATProject, ChessProject, PortfolioProject } from './Util/ProjectObje
 
 const App = () => {
     const [headerHeight, setHeaderHeight] = useState<number>(0);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const updateScreenWidth = () => {
+        setScreenWidth(window.innerWidth);
+    };
 
     useEffect(() => {
         setScrollPaddingForHeader();
-    }, [])
+    }, [screenWidth]) // re-calculate scroll padding for header when screen width changes
+
+    // Event listener to update screenWidth when the window is resized
+    useEffect(() => {
+        window.addEventListener('resize', updateScreenWidth);
+
+        // Clean up the event listener when component unmounts
+        return () => {
+            window.removeEventListener('resize', updateScreenWidth);
+        };
+    }, []);
+
+
 
     return (
         <Router>
