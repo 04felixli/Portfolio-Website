@@ -21,7 +21,7 @@ function MainPage({ headerHeight }: Props) {
 
       <div id="Home"></div>
 
-      <section className='mt-52 py-8 px-8 tablet:px-20 text-left max-w-[1920px] w-full'>
+      <section className='mt-20 tablet:mt-44 laptop:mt-48 py-8 px-8 tablet:px-20 text-left max-w-[1920px] w-full'>
         <section>
           <Home />
         </section>
