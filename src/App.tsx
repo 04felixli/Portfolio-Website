@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { setScrollPaddingForHeader } from './Util/lib';
 import { IMFATProject, ChessProject, PortfolioProject } from './Util/Objects/ProjectObjects';
 import { inject } from '@vercel/analytics';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 
 const App = () => {
@@ -49,6 +51,7 @@ const App = () => {
                     <Route path="*" element={<MainPage headerHeight={headerHeight} />} />
                 </Route>
             </Routes>
+            <SpeedInsights />
         </Router>
     );
 };
