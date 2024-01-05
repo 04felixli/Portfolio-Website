@@ -1,6 +1,6 @@
 import React from "react";
 import "../../GlobalStyles.css";
-import { AboutMe } from "../../Util/AboutMeObjects";
+import { AboutMe } from "../../Util/Objects/AboutMeObjects";
 
 const Home = () => {
 

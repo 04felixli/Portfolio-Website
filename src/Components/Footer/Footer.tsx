@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutMe } from "../../Util/AboutMeObjects";
+import { AboutMe } from "../../Util/Objects/AboutMeObjects";
 
 const Footer = () => {
     return (

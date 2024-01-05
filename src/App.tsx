@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './Components/MainPage';
 import ResumePDF from './Components/ResumePDF';
-import Layout from './Util/Layout';
+import Layout from './Util/Components/Layout';
 import DetailedProject from './Components/Projects/DetailedProject';
 import { useState } from 'react';
 import { setScrollPaddingForHeader } from './Util/lib';
-import { IMFATProject, ChessProject, PortfolioProject } from './Util/ProjectObjects';
+import { IMFATProject, ChessProject, PortfolioProject } from './Util/Objects/ProjectObjects';
 
 const App = () => {
     const [headerHeight, setHeaderHeight] = useState<number>(0);

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../GlobalStyles.css";
-import { RIFOExperience, RogersExperience } from "../../Util/ExperienceObjects";
+import { RIFOExperience, RogersExperience } from "../../Util/Objects/ExperienceObjects";
 import Experience from "./Experience";
 
 const Experiences = () => {

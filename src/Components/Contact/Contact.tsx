@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from '@emailjs/browser';
-import LoadingIcon from "../../Util/LoadingIcon";
+import LoadingIcon from "../../Util/Components/LoadingIcon";
 
 
 const Contact = () => {

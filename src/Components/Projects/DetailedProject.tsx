@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect } from "react";
-import { ProjectObject } from "../../Util/ProjectObjects";
-import { ProjectStatus } from "../../Util/ProjectObjects";
+import { ProjectObject } from "../../Util/Objects/ProjectObjects";
+import { ProjectStatus } from "../../Util/Objects/ProjectObjects";
 
 interface Props {
     project: ProjectObject;

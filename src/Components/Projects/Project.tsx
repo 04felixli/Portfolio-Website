@@ -1,6 +1,6 @@
 import React from "react";
 import "../../GlobalStyles.css";
-import { ProjectObject } from "../../Util/ProjectObjects";
+import { ProjectObject } from "../../Util/Objects/ProjectObjects";
 import { Link } from "react-router-dom";
 import { textChangeRangeNewSpan } from "typescript";
 

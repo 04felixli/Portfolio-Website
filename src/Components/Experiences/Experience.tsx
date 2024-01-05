@@ -1,6 +1,6 @@
 import React from "react";
 import "../../GlobalStyles.css";
-import { ExperienceObject } from "../../Util/ExperienceObjects";
+import { ExperienceObject } from "../../Util/Objects/ExperienceObjects";
 
 interface Props {
     experience: ExperienceObject;

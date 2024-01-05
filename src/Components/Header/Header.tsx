@@ -2,7 +2,7 @@ import React from "react";
 import "../../GlobalStyles.css";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import GrayBg from "../../Util/GrayedBg";
+import GrayBg from "../../Util/Components/GrayedBg";
 
 interface Props {
     headerHeight: number;

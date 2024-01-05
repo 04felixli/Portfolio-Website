@@ -1,7 +1,7 @@
 import React from "react";
 import "../../GlobalStyles.css";
 import Project from "./Project";
-import { IMFATProject, ChessProject, PortfolioProject } from "../../Util/ProjectObjects";
+import { IMFATProject, ChessProject, PortfolioProject } from "../../Util/Objects/ProjectObjects";
 
 const Projects = () => {
 
