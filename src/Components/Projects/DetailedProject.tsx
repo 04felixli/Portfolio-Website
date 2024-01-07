@@ -39,7 +39,7 @@ const DetailedProject = ({ project }: Props) => {
                         }
                         {project.reasonForBuilding && <p>{project.reasonForBuilding}</p>}
                         {project.overview && <p className="mt-5">{project.overview}</p>}
-                        <p className="mt-5">{project.featuresLine}</p>
+                        <p className="mt-5 font-bold">{project.featuresLine}</p>
                         <ul className="mt-3">
                             {project.featuresList?.map((feature: string, index: number) => (
                                 <li key={index} className="border-b-2 border-color2 m-3 w-fit">{feature}</li>
@@ -49,7 +49,7 @@ const DetailedProject = ({ project }: Props) => {
                         {project.otherInfo && <p className="mt-5">{project.otherInfo}</p>}
 
                         <section className="flex flex-col mt-8 text-lg">
-                            <p>Tech Stack:</p>
+                            <p className="font-bold">Tech Stack:</p>
                             <ul className="flex flex-row mt-5 flex-wrap">
                                 {project.techStack.map((tech: string, index: number) => (
                                     <li key={index} className="px-4 py-1 rounded-lg m-1 bg-color3 text-center text-nowrap">{tech}</li>
@@ -58,7 +58,7 @@ const DetailedProject = ({ project }: Props) => {
                         </section>
 
                         <section className="mt-8 text-lg">
-                            <p>Want to see more?</p>
+                            <p className="font-bold">Want to see more?</p>
 
                             <div className="flex flex-row mt-5 flex-wrap">
                                 {project.githubLink && <a href={project.githubLink} target="_blank" className="px-4 py-1 shadow-md rounded-full m-1 bg-color6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:shadow-lg text-center text-nowrap">Github Repo</a>}
