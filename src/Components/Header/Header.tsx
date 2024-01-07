@@ -62,6 +62,9 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
                                 <Link to="/#Contact" onClick={toggleMobileMenu} className="mt-2">
                                     Contact
                                 </Link>
+
+                                <a href="Resume.pdf" target="_blank" rel="noreferrer" className="mt-2">Resume</a>
+
                             </div>
 
                             <GrayBg onClick={toggleMobileMenu} />
@@ -90,6 +93,8 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
                     <Link to="/#Contact" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">
                         Contact
                     </Link>
+
+                    <a href="Resume.pdf" target="_blank" rel="noreferrer" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-color4 duration-300 hover:shadow-md rounded-full px-4">Resume</a>
                 </div>
 
             </nav>
