@@ -47,19 +47,19 @@ const Header = ({ headerHeight, setHeaderHeight }: Props) => {
                                     Home
                                 </Link>
 
-                                <Link to="/#Projects" onClick={toggleMobileMenu}>
+                                <Link to="/#Projects" onClick={toggleMobileMenu} className="mt-2">
                                     Projects
                                 </Link>
 
-                                <Link to="/#Experiences" onClick={toggleMobileMenu}>
+                                <Link to="/#Experiences" onClick={toggleMobileMenu} className="mt-2">
                                     Experiences
                                 </Link>
 
-                                <Link to="/#About" onClick={toggleMobileMenu}>
+                                <Link to="/#About" onClick={toggleMobileMenu} className="mt-2">
                                     About
                                 </Link>
 
-                                <Link to="/#Contact" onClick={toggleMobileMenu}>
+                                <Link to="/#Contact" onClick={toggleMobileMenu} className="mt-2">
                                     Contact
                                 </Link>
                             </div>
