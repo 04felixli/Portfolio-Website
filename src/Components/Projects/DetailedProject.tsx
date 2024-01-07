@@ -39,7 +39,7 @@ const DetailedProject = ({ project }: Props) => {
                         }
                         {project.reasonForBuilding && <p>{project.reasonForBuilding}</p>}
                         {project.overview && <p className="mt-5">{project.overview}</p>}
-                        <p className="mt-5 font-bold">{project.featuresLine}</p>
+                        <p className="mt-5 font-bold">Features:</p>
                         <ul className="mt-3">
                             {project.featuresList?.map((feature: string, index: number) => (
                                 <li key={index} className="border-b-2 border-color2 m-3 w-fit">{feature}</li>

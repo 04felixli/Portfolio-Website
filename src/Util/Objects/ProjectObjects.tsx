@@ -7,7 +7,6 @@ export interface ProjectObject {
     URL: string; // URL to the detailed project page
     reasonForBuilding: string | undefined;
     overview: string | undefined;
-    featuresLine: string | undefined; // A sentence to segway into the list of features 
     featuresList: string[] | undefined;
     otherInfo: string | undefined;
     githubLink: string | undefined;
@@ -42,7 +41,6 @@ export const IMFATProject: ProjectObject = {
     overview: `Enter IMFAT, or the “Individually Managed Fitness Activity Tracker”. It’s a comprehensive web application empowering 
                gym-goers to track their workouts and personal metrics, monitor progress, and create customized workout templates effortlessly.
                Best of all? It’s totally free! (Or it will be…when I finish it…)`,
-    featuresLine: 'Right now, it has features such as:',
     featuresList: [
         'Tracking workout date, time, and duration',
         'Ability to track various exercises',
@@ -67,7 +65,6 @@ export const ChessProject: ProjectObject = {
     URL: "/Projects/Chess",
     reasonForBuilding: 'The goal of this project was to create an interactive Player vs. Player chess game using Python and the Pygame library.',
     overview: undefined,
-    featuresLine: 'It has features such as:',
     featuresList: [
         'Interactive GUI',
         'Piece Movement and Rules',
@@ -97,7 +94,6 @@ export const PortfolioProject: ProjectObject = {
                         detailed explaination of all the projects and experiences I've done or had in the past. 
                         Making pixels on a screen look pretty is also pretty theraputic, so there's that as well I guess :)`,
     overview: `And considering you spent more than 10 seconds on this website and made it this to this page, I'd say this "project" needs no further explanation or picture to go with it.`,
-    featuresLine: 'Features include:',
     featuresList: [
         'Responsive Design',
         'Project Showcase',
