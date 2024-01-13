@@ -16,7 +16,7 @@ interface AboutMeObject {
 export const AboutMe: AboutMeObject = {
     intro: 'Hey there! My name is Felix Li and I\'m a second year computer engineering student at the University of Waterloo.',
     professionalInterests: 'I just finished my co-op at RIFO Holdings Group as a full stack developer, and now I\'m looking for summer 2024 internships.',
-    otherInterests: 'When I\'m not studying, you can find me at the gym, eating, or learning about random stuff like Star Wars, Halo, DC, and Marvel! Recently I\'ve been really into web/full stack dev, which is the reason this website exists!',
+    otherInterests: 'When I\'m not studying, you can find me at the gym, eating, playing basketball, swimming, or learning about random stuff like Star Wars and Marvel! Recently I\'ve been really into web/full stack dev, which is the reason this website exists!',
     introduceTechStack: `Here are the technologies I've worked with:`,
     conclusion: 'Want to chat about anything? Just',
     linkToContact: 'reach out!',
